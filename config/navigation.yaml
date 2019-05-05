@@ -1,0 +1,6 @@
+- name: "index"
+  link: "/"
+- name: "approach"
+  link: "/approach"
+- name: "profile"
+  link: "/profile"
