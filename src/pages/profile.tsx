@@ -20,11 +20,11 @@ const Profile = () => {
       />
       <AnimatedBox style={pageAnimation}>
         <Article py={140}>
-          <h1>Hi. I'm Casey Kennedy!</h1>
+        <h2>My approach</h2>
           <p>
-            You can visit my <a href='https://www.lekoarts.de/en'>website</a> or
+            You can visit my <a href='https://www.caseykennedy.me'>website</a> or
             my other{' '}
-            <a href='https://gatsby-starter-portfolio.netlify.com'>
+            <a href='#'>
               Gatsby projects
             </a>
             .

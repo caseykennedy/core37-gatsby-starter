@@ -9,18 +9,22 @@ const Profile = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
-    to: { opacity: 1 },
+    to: { opacity: 1 }
   })
 
   return (
     <Layout>
-      <SEO title="Profile | Casey Kennedy" desc="Welcome to my site, bitches." />
+      <SEO title='core37 Gatsby Starter' />
       <AnimatedBox style={pageAnimation}>
         <Article py={140}>
-          <h1>Hi. I'm Casey Kennedy!</h1>
+          <h2>My approach</h2>
           <p>
-            You can visit my <a href="https://www.lekoarts.de/en">website</a> or my other{' '}
-            <a href="https://gatsby-starter-portfolio.netlify.com">Gatsby projects</a>.
+            You can visit my <a href='https://www.caseykennedy.me'>website</a> or
+            my other{' '}
+            <a href='#'>
+              Gatsby projects
+            </a>
+            .
           </p>
         </Article>
       </AnimatedBox>
