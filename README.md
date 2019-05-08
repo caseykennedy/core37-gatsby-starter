@@ -11,6 +11,7 @@
 - Shows your Instagram posts
 - TypeScript
 - Cypress for End-to-End testing
+-   [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
 - react-spring animations
 - Uses styled-components + styled-system for styling
 - Google Analytics support
