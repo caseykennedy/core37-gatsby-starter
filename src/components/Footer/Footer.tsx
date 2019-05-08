@@ -1,8 +1,9 @@
 import * as React from 'react'
 import styled from 'styled-components'
-// import { readableColor } from 'polished'
 import { Flex } from 'rebass'
-// import Logo from '../logo'
+import { readableColor } from 'polished'
+
+import Logo from '../logo'
 
 interface Props {}
 
