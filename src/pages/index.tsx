@@ -9,6 +9,7 @@ import SEO from '../components/SEO'
 import { Text } from 'rebass'
 import { AnimatedBox } from '../elements'
 import Article from '../components/Article'
+import Divider from '../components/Divider'
 
 interface Props {}
 
@@ -25,6 +26,7 @@ const Index: React.FunctionComponent<Props> = () => {
         <Article py={140}>
           <Text fontSize={7}>core37 Gatsby Starter</Text>
         </Article>
+        <Divider bg='black' py={60} />
       </AnimatedBox>
     </Layout>
   )

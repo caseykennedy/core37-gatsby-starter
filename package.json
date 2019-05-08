@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-portfolio-jodie",
+  "name": "core37-gatsby-starter",
   "private": true,
-  "description": "Image-heavy photography portfolio with colorful accents & great typography",
+  "description": "Gatsby TypeScript Starter with Styled System",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
