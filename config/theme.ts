@@ -41,11 +41,11 @@ const theme: ThemeShape = {
 
   space: [
     '0',
-    '0.5rem',
+    '0.6rem',
     '1rem',
-    '1.5rem',
+    '1.6rem',
     '2rem',
-    '2.5rem',
+    '2.6rem',
     '3rem',
     '4rem',
     '5rem',
@@ -59,6 +59,7 @@ const theme: ThemeShape = {
   },
 
   fontSizes: [
+    '1.1rem',
     '1.3rem',
     '1.6rem',
     '2rem',
@@ -81,7 +82,7 @@ const theme: ThemeShape = {
   },
 
   // Constants
-  maxWidth: 1600,
+  maxWidth: 1620,
 
   transition: {
     string: 'all 0.37s ease',

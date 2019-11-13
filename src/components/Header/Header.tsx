@@ -75,19 +75,19 @@ const Header: React.SFC<Props> = ({ title }) => {
 const Nav = styled.nav`
   a {
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: ${theme.fontSizes[0]};
     line-height: 1;
     margin-left: 1rem;
 
     &:hover,
     &:focus,
     &.nav--active {
-      color: ${props => props.theme.colors.primary};
+      color: ${theme.colors.primary};
     }
 
-    @media (min-width: ${props => props.theme.breakpoints[1]}) {
-      font-size: 1.3rem;
-    }
+    /* @media (min-width: ${theme.breakpoints[1]}) {
+      font-size: ${theme.fontSizes[0]};
+    } */
   }
 `
 

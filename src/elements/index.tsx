@@ -73,6 +73,7 @@ type ElementProps = SpaceProps &
 
 export const Box = styled.div<ElementProps>`
   box-sizing: border-box;
+  height: auto;
   transition: ${theme.transition.string};
   ${space}
   ${width}
@@ -109,6 +110,7 @@ AnimatedBox.displayName = 'AnimatedBox'
 export const Flex = styled.div<ElementProps>`
   display: flex;
   box-sizing: border-box;
+  height: auto;
   ${space}
   ${width}
   ${color}

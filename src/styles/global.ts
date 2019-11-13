@@ -9,13 +9,15 @@ import AeonikRegularWoff from './fonts/AeonikRegular.woff'
 import AeonikRegularOtf from './fonts/AeonikRegular.otf'
 
 const GlobalStyles = createGlobalStyle`
+  ${reset}
+  
   @font-face {
     font-family: 'Aeonik';
-    src: url('${AeonikRegularEot}');
-    src: url('${AeonikRegularWoff2}') format('woff2'),
-        url('${AeonikRegularWoff}') format('woff'),
-        url('${AeonikRegularOtf}') format('opentype'),
-        url('${AeonikRegularEot}?#iefix') format('embedded-opentype');
+    src: url(${AeonikRegularEot});
+    src: url(${AeonikRegularWoff2}) format('woff2'),
+        url(${AeonikRegularWoff}) format('woff'),
+        url(${AeonikRegularOtf}) format('opentype'),
+        url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -32,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   }
   
   body {
-    font-size: 14px;
+    font-size: 16px;
     border: 0;
     margin: 0;
     padding: 0;
@@ -59,7 +61,9 @@ const GlobalStyles = createGlobalStyle`
   h1, h2, h3, h4, h5, h6 {
     font-weight: ${theme.fontWeights.normal};
     line-height: 1;
-    margin: ${theme.space[1]} 0 ${theme.space[2]};
+    letter-spacing: 0.03rem;
+    margin-top: 0;
+    margin-bottom: ${theme.space[2]};
     transition: ${theme.transition.string};
   }
   
@@ -87,9 +91,10 @@ const GlobalStyles = createGlobalStyle`
   p {
     font-size: ${theme.fontSizes[0]};
     font-weight: ${theme.fontWeights.normal};
-    line-height: 1.1;
-    margin: ${theme.space[1]} 0 ${theme.space[3]};
+    line-height: 1.24;
     letter-spacing: 0.03rem;
+    margin-top: 0;
+    margin-bottom: ${theme.space[2]};
   }
 
   a {
@@ -102,13 +107,7 @@ const GlobalStyles = createGlobalStyle`
     }
   }
   
-  @media (min-width: 769px) {
-    /* font-size: 16px; */
-
-    body {
-      font-size: 16px;
-    }
-    
+  @media screen and (min-width: ${theme.breakpoints[1]}) {
     h1 {
       font-size: ${theme.fontSizes[7]};
     }
@@ -128,11 +127,10 @@ const GlobalStyles = createGlobalStyle`
       font-size: ${theme.fontSizes[2]};
     }
     p {
-      font-size: ${theme.fontSizes[0]};
+      font-size: ${theme.fontSizes[1]};
     }
   }
   
-  ${reset}
 `
 
 export default GlobalStyles

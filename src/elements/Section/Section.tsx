@@ -24,33 +24,25 @@ interface Props {
   pb?: any
 }
 
-const Section: React.SFC<Props> = ({
-  children,
-  bg,
-  color,
-  pt,
-  pb
-}) => (
-  <Flex
-    as="section"
-    justifyContent="flex-start"
-    alignItems="center"
-    bg={bg}
-    color={color}
-    pt={pt}
-    pb={pb}
-  >
-    <Box width={1} maxWidth={theme.maxWidth} px={[2, 3, 4]} m="0 auto">
+const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
+  <Box as="section" width={1} bg={bg} color={color} pt={pt} pb={pb}>
+    <Flex
+      flexWrap="wrap"
+      width={1}
+      maxWidth={theme.maxWidth}
+      px={[2, 3, 4]}
+      m="0 auto"
+    >
       {children}
-    </Box>
-  </Flex>
+    </Flex>
+  </Box>
 )
 
 Section.defaultProps = {
   bg: '',
   color: '',
-  pt: [3, 5, 7],
-  pb: [3, 5, 7]
+  pt: [2, 3, 4],
+  pb: [2, 3, 4]
 }
 
 // const PageWidth = styled(Box)`

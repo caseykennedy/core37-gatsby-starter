@@ -14,7 +14,7 @@ import SEO from '../components/SEO'
 import Divider from '../components/Divider'
 
 // Elements
-import { AnimatedBox, Heading } from '../elements'
+import { AnimatedBox, Box, Flex } from '../elements'
 import Section from '../elements/Section'
 
 // Config
@@ -33,38 +33,27 @@ const IndexPage: React.FunctionComponent<Props> = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Section bg="black" color="white">
-          {/* <Text fontSize={7}>core37 Gatsby Starter</Text> */}
-          <h1>Header</h1>
-          <h2>Header</h2>
-          <h3>Header</h3>
-          <h4>Header</h4>
-          <h5>Header</h5>
-          <h6>Header</h6>
-          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
-          <h1>Header</h1>
-          <h2>Header</h2>
-          <h3>Header</h3>
-          <h4>Header</h4>
-          <h5>Header</h5>
-          <h6>Header</h6>
-          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
-          <h1>Header</h1>
-          <h2>Header</h2>
-          <h3>Header</h3>
-          <h4>Header</h4>
-          <h5>Header</h5>
-          <h6>Header</h6>
-          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
-          <h1>Header</h1>
-          <h2>Header</h2>
-          <h3>Header</h3>
-          <h4>Header</h4>
-          <h5>Header</h5>
-          <h6>Header</h6>
-          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
+        <Section bg="black" color="white" pt={10} pb={10}>
+          <Box width={[1, 1, 1 / 2]}>
+            <h2>Hero</h2>
+            <p>
+              Our working language is English, and you should strive to use it
+              around the office, at lunch and in meetings as well to include
+              everyone that doesn’t speak the local tongue.
+            </p>
+          </Box>
         </Section>
-        <Divider bg={['yellow', 'black', 'magenta']} py={60} />
+        <Section bg="white" color="black">
+          <Box width={[1, 1, 1 / 2]}>
+            <h3>Header</h3>
+            <p>
+              Our working language is English, and you should strive to use it
+              around the office, at lunch and in meetings as well to include
+              everyone that doesn’t speak the local tongue.
+            </p>
+          </Box>
+        </Section>
+        <Divider bg={['yellow', 'blue', 'orange']} py={60} />
       </AnimatedBox>
     </Layout>
   )
