@@ -19,10 +19,10 @@ const Article: React.SFC<Props> = ({
   pageWidth
 }) => (
   <Container
-    as='article'
-    flexWrap='wrap'
-    flexDirection='row'
-    justifyContent='flex-start'
+    as="article"
+    flexWrap="wrap"
+    flexDirection="row"
+    justifyContent="flex-start"
     bg={bg}
     bgImage={bgImage}
     px={px}

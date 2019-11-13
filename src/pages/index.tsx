@@ -1,19 +1,29 @@
+// Index page:
+// This is the home page
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import React from 'react'
-import { graphql } from 'gatsby'
-import Img from 'gatsby-image'
-import styled from 'styled-components'
 import { animated, useSpring, config } from 'react-spring'
+
+// Components
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-
-import { Text } from 'rebass'
-import { AnimatedBox } from '../elements'
-import Article from '../components/Article'
 import Divider from '../components/Divider'
 
+// Elements
+import { AnimatedBox, Heading } from '../elements'
+import Section from '../elements/Section'
+
+// Config
+import theme from '../../config/theme'
+
+// Types
 interface Props {}
 
-const Index: React.FunctionComponent<Props> = () => {
+const IndexPage: React.FunctionComponent<Props> = () => {
   const pageAnimation = useSpring({
     config: config.slow,
     from: { opacity: 0 },
@@ -23,13 +33,41 @@ const Index: React.FunctionComponent<Props> = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Article py={140}>
-          <Text fontSize={7}>core37 Gatsby Starter</Text>
-        </Article>
-        <Divider bg='black' py={60} />
+        <Section bg="black" color="white">
+          {/* <Text fontSize={7}>core37 Gatsby Starter</Text> */}
+          <h1>Header</h1>
+          <h2>Header</h2>
+          <h3>Header</h3>
+          <h4>Header</h4>
+          <h5>Header</h5>
+          <h6>Header</h6>
+          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
+          <h1>Header</h1>
+          <h2>Header</h2>
+          <h3>Header</h3>
+          <h4>Header</h4>
+          <h5>Header</h5>
+          <h6>Header</h6>
+          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
+          <h1>Header</h1>
+          <h2>Header</h2>
+          <h3>Header</h3>
+          <h4>Header</h4>
+          <h5>Header</h5>
+          <h6>Header</h6>
+          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
+          <h1>Header</h1>
+          <h2>Header</h2>
+          <h3>Header</h3>
+          <h4>Header</h4>
+          <h5>Header</h5>
+          <h6>Header</h6>
+          <p>What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man What the heck man</p>
+        </Section>
+        <Divider bg={['yellow', 'black', 'magenta']} py={60} />
       </AnimatedBox>
     </Layout>
   )
 }
 
-export default Index
+export default IndexPage

@@ -1,8 +1,26 @@
+// Elements:
+// Box and Flex layout components using Styled System
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import * as React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import styled from 'styled-components'
+
+// Tools
+import Headroom from 'react-headroom'
 // import { readableColor } from 'polished'
+
+// Elements
 import { Box, Flex } from '../../elements'
+
+// Config
+import theme from '../../../config/theme'
+
+// Begin Component
+//////////////////////////////////////////////////////////////////////
 
 interface Props {
   title: string
@@ -22,54 +40,54 @@ interface QueryResult {
 const Header: React.SFC<Props> = ({ title }) => {
   const data: QueryResult = useStaticQuery(query)
   return (
-    <Flex
-      as='header'
-      bg=''
-      alignItems='center'
-      justifyContent='space-between'
-      px={[1, 2, 2, 3, 3]}
-      py={[0, 1, 2, 2, 3]}
+    <Headroom
+      onPin={() => console.log('pinned')}
+      onUnpin={() => console.log('unpinned')}
     >
-      <Box>
-        <Link to='/'>{title}</Link>
+      <Box as="header" bg="background" py={[1, 2, 2]}>
+        <Flex
+          alignItems="center"
+          justifyContent="space-between"
+          px={[2, 3, 4]}
+          m="0 auto"
+          maxWidth={theme.maxWidth}
+        >
+          <Box>
+            <Link to="/">{title}</Link>
+          </Box>
+          <Nav>
+            {data.navigation.edges.map(({ node: item }) => (
+              <Link
+                to={item.link}
+                key={item.name}
+                activeClassName="nav--active"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </Nav>
+        </Flex>
       </Box>
-      <Nav>
-        {data.navigation.edges.map(({ node: item }) => (
-          <Link to={item.link} key={item.name} activeClassName='nav--active'>
-            {item.name}
-          </Link>
-        ))}
-      </Nav>
-    </Flex>
+    </Headroom>
   )
 }
 
 const Nav = styled.nav`
-  .nav--active {
-    color: ${props => props.theme.colors.primary};
-  }
   a {
     text-decoration: none;
-    font-size: ${props => props.theme.fontSizes[1]};
-    line-height: 1.5;
-    padding-left: 1rem;
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-left: 1rem;
+
     &:hover,
     &:focus,
-    &.navlink-active {
+    &.nav--active {
       color: ${props => props.theme.colors.primary};
     }
-    /* @media (max-width: ${props => props.theme.breakpoints[2]}) {
-      font-size: ${props => props.theme.fontSizes[2]};
-      margin-left: ${props => props.theme.space[4]};
+
+    @media (min-width: ${props => props.theme.breakpoints[1]}) {
+      font-size: 1.3rem;
     }
-    @media (max-width: ${props => props.theme.breakpoints[1]}) {
-      font-size: ${props => props.theme.fontSizes[1]};
-      margin-left: ${props => props.theme.space[3]};
-    }
-    @media (max-width: ${props => props.theme.breakpoints[0]}) {
-      font-size: ${props => props.theme.fontSizes[0]};
-      margin-left: ${props => props.theme.space[2]};
-    } */
   }
 `
 

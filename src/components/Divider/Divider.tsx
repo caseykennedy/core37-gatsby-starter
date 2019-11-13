@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Box } from 'rebass'
 
 interface Props {
-  bg: string
+  bg: any
   py: any
 }
 

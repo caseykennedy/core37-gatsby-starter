@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import { AnimatedBox } from '../elements'
 import SEO from '../components/SEO'
 import { config, useSpring } from 'react-spring'
-import Article from '../components/Article'
+import Article from '../elements/Article'
 
 const Profile = () => {
   const pageAnimation = useSpring({
@@ -14,14 +14,14 @@ const Profile = () => {
 
   return (
     <Layout>
-      <SEO title='core37 Gatsby Starter' />
+      <SEO title="core37 Gatsby Starter" />
       <AnimatedBox style={pageAnimation}>
         <Article py={140}>
           <h2>My approach</h2>
           <p>
-            You can visit my <a href='https://www.caseykennedy.me'>website</a> or
+            You can visit my <a href="https://www.caseykennedy.me">website</a> or
             my other{' '}
-            <a href='#'>
+            <a href="#">
               Gatsby projects
             </a>
             .

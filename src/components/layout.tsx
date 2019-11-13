@@ -1,3 +1,10 @@
+// Elements:
+// Box and Flex layout components using Styled System
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import * as React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import styled, { ThemeProvider } from 'styled-components'
@@ -6,9 +13,53 @@ import 'typeface-work-sans'
 import theme from '../../config/theme'
 import GlobalStyles from '../styles/global'
 
+// Componentns
 import Header from './Header'
 import Footer from './Footer'
+
+// Elements
 import { Box } from '../elements'
+
+// Begin Component
+//////////////////////////////////////////////////////////////////////
+
+// interface RenderData {
+//   site: {
+//     siteMetadata: {
+//       title: string
+//       description: string
+//     }
+//   }
+// }
+
+type LayoutProps = {
+  children: React.ReactNode
+  color: string
+}
+
+const Layout = ({ children, color }: LayoutProps) => {
+  const { title }: { title: string } = useSiteMetadata()
+  return (
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <Box>
+          <Header title={title} />
+          <Box as="main" color={color}>
+            {children}
+          </Box>
+          <Footer />
+        </Box>
+      </>
+    </ThemeProvider>
+  )
+}
+
+export default Layout
+
+Layout.defaultProps = {
+  color: 'black'
+}
 
 const useSiteMetadata = () => {
   const { site } = useStaticQuery(
@@ -25,41 +76,8 @@ const useSiteMetadata = () => {
   return site.siteMetadata
 }
 
-type LayoutProps = { children: React.ReactNode } & typeof defaultProps
-
-// interface RenderData {
-//   site: {
-//     siteMetadata: {
-//       title: string
-//       description: string
-//     }
-//   }
-// }
-
-const defaultProps = {
-  color: 'white'
-}
-
-const Layout = ({ children, color }: LayoutProps) => {
-  const { title }: {title: string} = useSiteMetadata()
-  return (
-    <ThemeProvider theme={theme}>
-      <>
-        <GlobalStyles />
-        <Box>
-          <Header title={title}/>
-          <Box as='main'>{children}</Box>
-          <Footer />
-        </Box>
-      </>
-    </ThemeProvider>
-  )
-}
-
-export default Layout
-
-Layout.defaultProps = defaultProps
-
+//////////////////////////////////////////////////////////////////////
+// End Component
 
 // const Footer = styled.footer<{ color: string }>`
 //   position: fixed;
