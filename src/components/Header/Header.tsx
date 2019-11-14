@@ -75,7 +75,7 @@ const Header: React.SFC<Props> = ({ title }) => {
 const Nav = styled.nav`
   a {
     text-decoration: none;
-    font-size: ${theme.fontSizes[0]};
+    font-size: ${theme.fontSizes[7]};
     line-height: 1;
     margin-left: 1rem;
 
@@ -85,8 +85,8 @@ const Nav = styled.nav`
       color: ${theme.colors.primary};
     }
 
-    /* @media (min-width: ${theme.breakpoints[1]}) {
-      font-size: ${theme.fontSizes[0]};
+    /* ${theme.mediaQueries.medium} {
+      font-size: ${theme.fontSizes[5]};
     } */
   }
 `

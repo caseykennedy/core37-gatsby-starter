@@ -1,5 +1,8 @@
 interface ThemeShape {
   breakpoints: string[]
+  mediaQueries: {
+    [key: string]: string
+  }
   colors: {
     [key: string]: string
   }
@@ -18,15 +21,32 @@ interface ThemeShape {
   transition: {
     [key: string]: string
   }
+  // textStyles: {
+  //   [key: string]: {
+  //     [key: string]: any
+  //   }
+  // }
+  // styles: {
+  //   [key: string]: {
+  //     [key: string]: any
+  //   }
+  // }
 }
 
+const breakpoints = ['376px', '769px', '1025px']
+// aliases - FUTURE ENHANCEMENT
+// breakpoints.xs = breakpoints[0];
+// breakpoints.sm = breakpoints[1];
+// breakpoints.md = breakpoints[2];
+// breakpoints.lg = breakpoints[3];
+
 const theme: ThemeShape = {
-  breakpoints: ['376px', '769px', '1025px'],
-  // mediaQueries: {
-  //   small: `@media screen and (min-width: ${breakpoints[0]})`,
-  //   medium: `@media screen and (min-width: ${breakpoints[1]})`,
-  //   large: `@media screen and (min-width: ${breakpoints[2]})`
-  // },
+  breakpoints,
+  mediaQueries: {
+    small: `@media screen and (min-width: ${breakpoints[0]})`,
+    medium: `@media screen and (min-width: ${breakpoints[1]})`,
+    large: `@media screen and (min-width: ${breakpoints[2]})`
+  },
   colors: {
     body: '#ebebeb',
     background: '#f5f5f5',
@@ -36,38 +56,39 @@ const theme: ThemeShape = {
     black: 'black',
     white: 'white',
     grey: '#58545a',
-    shade: '#f5f5f5',
+    shade: '#f5f5f5'
   },
 
   space: [
     '0',
-    '0.6rem',
+    '0.25rem',
+    '0.5rem',
     '1rem',
-    '1.6rem',
     '2rem',
-    '2.6rem',
     '3rem',
     '4rem',
     '5rem',
     '6rem',
-    '7rem'
+    '7rem',
+    '8rem'
   ],
 
   fonts: {
     body: '"Aeonik", sans-serif',
-    header: '"Aeonik", sans-serif'
+    heading: 'inherit',
+    monospace: 'Menlo, monospace'
   },
 
   fontSizes: [
-    '1.1rem',
-    '1.3rem',
-    '1.6rem',
-    '2rem',
-    '2.6rem',
-    '3rem',
-    '4rem',
-    '5rem',
-    '6rem'
+    '0.618em',
+    '11.089em',
+    '6.854em',
+    '4.236em',
+    '2.618em',
+    '1.618em',
+    '0.618em',
+    '1.25em',
+    '1em'
   ],
 
   Heading: {
@@ -85,8 +106,56 @@ const theme: ThemeShape = {
   maxWidth: 1620,
 
   transition: {
-    string: 'all 0.37s ease',
+    string: 'all 0.37s ease'
   }
+
+  // textStyles: {
+  //   display: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: [5, 6],
+  //     fontWeight: 'display',
+  //     letterSpacing: '-0.03em',
+  //     mt: 3,
+  //   },
+  // },
+
+  // styles: {
+  //   root: {
+  //     fontFamily: 'body',
+  //     lineHeight: 'body',
+  //     fontWeight: 'body',
+  //   },
+  //   h1: {
+  //     variant: 'textStyles.display',
+  //     fontSize: 7,
+  //   },
+  //   h2: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: 5,
+  //   },
+  //   h3: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: 4,
+  //   },
+  //   h4: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: 3,
+  //   },
+  //   h5: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: 2,
+  //   },
+  //   h6: {
+  //     variant: 'textStyles.heading',
+  //     fontSize: 1,
+  //   },
+  //   a: {
+  //     color: 'primary',
+  //     '&:hover': {
+  //       color: 'secondary',
+  //     },
+  //   },
+  // },
 }
 
 export default theme

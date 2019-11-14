@@ -35,7 +35,7 @@ const IndexPage: React.FunctionComponent<Props> = () => {
       <AnimatedBox style={pageAnimation}>
         <Section bg="black" color="white" pt={10} pb={10}>
           <Box width={[1, 1, 1 / 2]}>
-            <h2>Hero</h2>
+            <h1>Hero</h1>
             <p>
               Our working language is English, and you should strive to use it
               around the office, at lunch and in meetings as well to include
@@ -45,7 +45,12 @@ const IndexPage: React.FunctionComponent<Props> = () => {
         </Section>
         <Section bg="white" color="black">
           <Box width={[1, 1, 1 / 2]}>
-            <h3>Header</h3>
+            <h3>Our working language is English</h3>
+            <p>
+              Our working language is English, and you should strive to use it
+              around the office, at lunch and in meetings as well to include
+              everyone that doesn’t speak the local tongue.
+            </p>
             <p>
               Our working language is English, and you should strive to use it
               around the office, at lunch and in meetings as well to include
@@ -53,7 +58,7 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             </p>
           </Box>
         </Section>
-        <Divider bg={['yellow', 'blue', 'orange']} py={60} />
+        <Divider bg={['yellow', 'blue', 'orange']} py={'40vh'} />
       </AnimatedBox>
     </Layout>
   )
