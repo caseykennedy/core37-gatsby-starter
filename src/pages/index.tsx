@@ -73,7 +73,7 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             </p>
           </Box>
           <Box width={[1, 1, 1 / 2]} p={5} bg="text" color="body">
-            <h3>Einstein, is he with you?</h3>
+            <h4>Einstein, is he with you?</h4>
             <p>
               Anyway, Grandpa hit him with the car and brought him into the
               house. He seemed so helpless, like a little lost puppy, my heart
