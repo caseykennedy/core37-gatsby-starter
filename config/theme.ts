@@ -1,3 +1,8 @@
+// Theme / Design system:
+
+// Types
+//////////////////////////////////////////////////////////////////////
+
 interface ThemeShape {
   breakpoints: string[]
   mediaQueries: {
@@ -33,6 +38,9 @@ interface ThemeShape {
   // }
 }
 
+// Begin theme
+//////////////////////////////////////////////////////////////////////
+
 const breakpoints = ['376px', '769px', '1025px']
 // aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
@@ -41,23 +49,33 @@ const breakpoints = ['376px', '769px', '1025px']
 // breakpoints.lg = breakpoints[3];
 
 const theme: ThemeShape = {
+  // Breakpoints
+  //////////////////////////////////////////////////////////////////////
+
   breakpoints,
   mediaQueries: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,
     medium: `@media screen and (min-width: ${breakpoints[1]})`,
     large: `@media screen and (min-width: ${breakpoints[2]})`
   },
+
+  // Color palette
+  //////////////////////////////////////////////////////////////////////
+
   colors: {
     body: '#ebebeb',
-    background: '#f5f5f5',
-    primary: '#CEB9A1',
-    secondary: '#CEB9A1',
-    accent: '#CEB9A1',
-    black: 'black',
-    white: 'white',
-    grey: '#58545a',
-    shade: '#f5f5f5'
+    text: 'hsl(10, 20%, 20%)',
+    background: 'hsl(10, 10%, 98%)',
+    primary: 'hsl(10, 80%, 50%)',
+    secondary: 'hsl(10, 60%, 50%)',
+    highlight: 'hsl(10, 40%, 90%)',
+    accent: 'hsl(250, 60%, 30%)',
+    muted: 'hsl(10, 20%, 94%)',
+    gray: 'hsl(10, 20%, 50%)'
   },
+
+  // Space
+  //////////////////////////////////////////////////////////////////////
 
   space: [
     '0',
@@ -72,6 +90,9 @@ const theme: ThemeShape = {
     '7rem',
     '8rem'
   ],
+
+  // Typography
+  //////////////////////////////////////////////////////////////////////
 
   fonts: {
     body: '"Aeonik", sans-serif',
@@ -103,7 +124,9 @@ const theme: ThemeShape = {
   },
 
   // Constants
-  maxWidth: 1620,
+  //////////////////////////////////////////////////////////////////////
+
+  maxWidth: 1680,
 
   transition: {
     string: 'all 0.37s ease'
@@ -159,3 +182,6 @@ const theme: ThemeShape = {
 }
 
 export default theme
+
+// End component
+//////////////////////////////////////////////////////////////////////

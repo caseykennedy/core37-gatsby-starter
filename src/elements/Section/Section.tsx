@@ -6,6 +6,8 @@
 
 // Core
 import * as React from 'react'
+
+// Components
 import { Box, Flex } from '../'
 import styled from 'styled-components'
 
@@ -30,7 +32,7 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
       flexWrap="wrap"
       width={1}
       maxWidth={theme.maxWidth}
-      px={[2, 3, 4]}
+      px={[3, 4, 5]}
       m="0 auto"
     >
       {children}
@@ -41,8 +43,8 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
 Section.defaultProps = {
   bg: '',
   color: '',
-  pt: [2, 4, 5],
-  pb: [2, 4, 5]
+  pt: [3, 4, 5],
+  pb: [3, 4, 5]
 }
 
 // const PageWidth = styled(Box)`

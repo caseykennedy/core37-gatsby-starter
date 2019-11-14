@@ -1,3 +1,9 @@
+// Global styles
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import { createGlobalStyle } from 'styled-components'
 import reset from './reset'
 import theme from '../../config/theme'
@@ -82,7 +88,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: ${theme.fontSizes[8]};
     letter-spacing: 0.5px;
     margin-bottom: 1.25em;
-
     &:last-child {
       margin-bottom: 0;
     }
