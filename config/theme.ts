@@ -50,7 +50,7 @@ const breakpoints = ['376px', '769px', '1025px']
 
 const theme: ThemeShape = {
   // Breakpoints
-  //////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
 
   breakpoints,
   mediaQueries: {
@@ -60,7 +60,7 @@ const theme: ThemeShape = {
   },
 
   // Color palette
-  //////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
 
   colors: {
     body: '#ebebeb',
@@ -75,7 +75,7 @@ const theme: ThemeShape = {
   },
 
   // Space
-  //////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
 
   space: [
     '0',
@@ -92,12 +92,12 @@ const theme: ThemeShape = {
   ],
 
   // Typography
-  //////////////////////////////////////////////////////////////////////
+  ////////////////////////////////////////////////////////////////////
 
   fonts: {
-    body: '"Aeonik", sans-serif',
-    heading: 'inherit',
-    monospace: 'Menlo, monospace'
+    body: `"Aeonik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    heading: `"inherit", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    code: `"Menlo", Consolas, "Liberation Mono", Menlo, Courier, monospace`
   },
 
   fontSizes: [
@@ -123,8 +123,8 @@ const theme: ThemeShape = {
     bold: 700
   },
 
-  // Constants
-  //////////////////////////////////////////////////////////////////////
+  // Base
+  ////////////////////////////////////////////////////////////////////
 
   maxWidth: 1680,
 

@@ -33,7 +33,7 @@ const GlobalStyles = createGlobalStyle`
   }
   ::selection {
     color: white;
-    background-color: ${theme.colors.primary};
+    background-color: ${theme.colors.accent};
   }
   html {
     font-size: 16px;
@@ -60,7 +60,7 @@ const GlobalStyles = createGlobalStyle`
   }
   h1, h2, h3, h4, h5, h6 {
     font-weight: ${theme.fontWeights.normal};
-    line-height: 1;
+    line-height: 1.15;
     letter-spacing: 0.5px;
     margin: 0 0 1.75rem;
     transition: ${theme.transition.string};

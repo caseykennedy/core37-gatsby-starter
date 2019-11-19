@@ -21,7 +21,6 @@ import {
   alignItems,
   justifyContent,
   textAlign,
-  textTransform,
   fontSize,
   fontWeight,
   lineHeight,
@@ -39,7 +38,6 @@ import {
   AlignItemsProps,
   JustifyContentProps,
   TextAlignProps,
-  TextTransformProps,
   FontSizeProps,
   FontWeightProps,
   LineHeightProps,
@@ -60,7 +58,6 @@ type ElementProps = SpaceProps &
   FlexProps &
   AlignSelfProps &
   TextAlignProps &
-  TextTransformProps &
   FontSizeProps &
   MaxWidthProps &
   DisplayProps &
@@ -84,7 +81,6 @@ export const Box = styled.div<ElementProps>`
   ${flex}
   ${alignSelf}
   ${textAlign}
-  ${textTransform}
   ${maxWidth}
   ${fontSize}
   ${display}
@@ -101,7 +97,6 @@ export const AnimatedBox = styled(animated.div)<ElementProps>`
   ${flex}
   ${alignSelf}
   ${textAlign}
-  ${textTransform}
   ${maxWidth}
   ${fontSize}
   ${display}
@@ -127,7 +122,6 @@ export const Flex = styled.div<ElementProps>`
   ${width}
   ${fontSize}
   ${textAlign}
-  ${textTransform}
   ${overflow}
 `
 
@@ -145,7 +139,6 @@ export const AnimatedFlex = styled(animated.div)<ElementProps>`
   ${width}
   ${fontSize}
   ${textAlign}
-  ${textTransform}
   ${overflow}
 `
 
@@ -162,7 +155,6 @@ export const Button = styled.button<ElementProps>`
   ${width}
   ${color}
   ${overflow}
-  ${textTransform}
 `
 
 Button.displayName = 'Button'
@@ -177,7 +169,6 @@ export const Heading = styled.div<ElementProps>`
   ${space}
   ${color}
   ${textAlign}
-  ${textTransform}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
@@ -194,7 +185,6 @@ export const Text = styled.div<ElementProps>`
   ${space}
   ${color}
   ${textAlign}
-  ${textTransform}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}

@@ -38,12 +38,6 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             <Heading as="h1" color="accent">
               core37 °°
             </Heading>
-            <p>
-              Alright, alright, okay McFly, get a grip on yourself. It's all a
-              dream. Just a very intense dream. Woh, hey, listen, you gotta help
-              me. You'll find out. Yeah, exactly. He's a peeping tom. Dad. Let's
-              get you into a radiation suit, we must prepare to reload.
-            </p>
           </Box>
         </Section>
         <Section bg="white" color="black">
@@ -65,12 +59,18 @@ const IndexPage: React.FunctionComponent<Props> = () => {
         </Section>
         <Flex flexWrap="wrap">
           <Box width={[1, 1, 1 / 2]} p={5} bg="highlight">
-            <h3>Einstein, is he with you?</h3>
+            <h4>Einstein, is he with you?</h4>
             <p>
               Anyway, Grandpa hit him with the car and brought him into the
               house. He seemed so helpless, like a little lost puppy, my heart
               just went out for him.
             </p>
+            <h1>core37 °°</h1>
+            <h2>core37 °°</h2>
+            <h3>core37 °°</h3>
+            <h4>core37 °°</h4>
+            <h5>core37 °°</h5>
+            <h6>core37 °°</h6>
           </Box>
           <Box width={[1, 1, 1 / 2]} p={5} bg="text" color="body">
             <h4>Einstein, is he with you?</h4>
@@ -81,7 +81,7 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             </p>
           </Box>
         </Flex>
-        <Divider bg={['primary', 'secondary', 'accent']} py={'40vh'} />
+        <Divider bg={['primary', 'secondary', 'accent']} py={'10vh'} />
       </AnimatedBox>
     </Layout>
   )

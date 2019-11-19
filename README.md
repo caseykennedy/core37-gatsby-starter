@@ -14,6 +14,7 @@
 - [x] [Husky](https://github.com/typicode/husky) & [lint-staged](https://github.com/okonet/lint-staged) for autofix each commit
 - [x] react-spring animations
 - [x] styled-components + styled-system + rebass for styling
+- [x] styled-css-grid for css grid layouts
 - [x] Google Analytics support
 - [x] SEO
     - [x] Sitemap
