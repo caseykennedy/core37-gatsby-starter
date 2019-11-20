@@ -26,22 +26,17 @@ interface ThemeShape {
   transition: {
     [key: string]: string
   }
-  // textStyles: {
-  //   [key: string]: {
-  //     [key: string]: any
-  //   }
-  // }
-  // styles: {
-  //   [key: string]: {
-  //     [key: string]: any
-  //   }
-  // }
+  root: {
+    font: {
+      [key: string]: string
+    }
+  }
 }
 
 // Begin theme
 //////////////////////////////////////////////////////////////////////
 
-const breakpoints = ['376px', '769px', '1025px']
+const breakpoints: string[] = ['376px', '769px', '1025px']
 // aliases - FUTURE ENHANCEMENT
 // breakpoints.xs = breakpoints[0];
 // breakpoints.sm = breakpoints[1];
@@ -117,10 +112,7 @@ const theme: ThemeShape = {
   },
 
   fontWeights: {
-    body: 400,
-    heading: 700,
     normal: 400,
-    bold: 700
   },
 
   // Base
@@ -130,55 +122,29 @@ const theme: ThemeShape = {
 
   transition: {
     string: 'all 0.37s ease'
+  },
+
+  root: {
+    font: {
+      // Base sizing
+      baseSize: 'var(--text-base-size)',
+      scaleRatio: 'var(--text-scale-ratio)',
+      baseLetterSpacing: 'var(--text-base-letter-spacing)',
+  
+      // Type scale
+      xs: 'var(--text-xs)',
+      sm: 'var(--text-sm)',
+      md: 'var(--text-md)',
+      lg: 'var(--text-lg)',
+      xl: 'var(--text-xl)',
+      xxl: 'var(--text-xxl)',
+      xxxl: 'var(--text-xxxl)',
+  
+      // Line height
+      headingLineHeight: 'var(--heading-line-height)',
+      bodyLineHeight: 'var(--body-line-height)'
+    }
   }
-
-  // textStyles: {
-  //   display: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: [5, 6],
-  //     fontWeight: 'display',
-  //     letterSpacing: '-0.03em',
-  //     mt: 3,
-  //   },
-  // },
-
-  // styles: {
-  //   root: {
-  //     fontFamily: 'body',
-  //     lineHeight: 'body',
-  //     fontWeight: 'body',
-  //   },
-  //   h1: {
-  //     variant: 'textStyles.display',
-  //     fontSize: 7,
-  //   },
-  //   h2: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: 5,
-  //   },
-  //   h3: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: 4,
-  //   },
-  //   h4: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: 3,
-  //   },
-  //   h5: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: 2,
-  //   },
-  //   h6: {
-  //     variant: 'textStyles.heading',
-  //     fontSize: 1,
-  //   },
-  //   a: {
-  //     color: 'primary',
-  //     '&:hover': {
-  //       color: 'secondary',
-  //     },
-  //   },
-  // },
 }
 
 export default theme

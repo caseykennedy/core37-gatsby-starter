@@ -1,6 +1,12 @@
+// Global reset
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import { css } from 'styled-components'
 
-const reset = css`
+const Reset = css`
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
   /* Document
@@ -456,4 +462,4 @@ const reset = css`
   }
 `
 
-export default reset
+export default Reset

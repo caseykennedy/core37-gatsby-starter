@@ -75,7 +75,6 @@ const Header: React.SFC<Props> = ({ title }) => {
 const Nav = styled.nav`
   a {
     text-decoration: none;
-    font-size: ${theme.fontSizes[7]};
     line-height: 1;
     margin-left: 1rem;
 

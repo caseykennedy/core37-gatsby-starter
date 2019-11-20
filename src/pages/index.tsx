@@ -69,8 +69,6 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             <h2>core37 °°</h2>
             <h3>core37 °°</h3>
             <h4>core37 °°</h4>
-            <h5>core37 °°</h5>
-            <h6>core37 °°</h6>
           </Box>
           <Box width={[1, 1, 1 / 2]} p={5} bg="text" color="body">
             <h4>Einstein, is he with you?</h4>
