@@ -6,19 +6,25 @@
 
 // Core
 import React from 'react'
+
+// Libraries
 import { animated, useSpring, config } from 'react-spring'
+import { Grid, Cell } from 'styled-css-grid'
 
 // Components
 import Layout from '../components/Layout'
+import Section from '../components/Section'
 import SEO from '../components/SEO'
 import Divider from '../components/Divider'
 
 // Elements
-import { AnimatedBox, Box, Flex, Heading } from '../elements'
-import Section from '../elements/Section'
+import { AnimatedBox, Box, Heading } from '../elements'
 
-// Config
+// Constants
 import theme from '../../config/theme'
+
+// Begin
+//////////////////////////////////////////////////////////////////////
 
 // Types
 interface Props {}
@@ -33,56 +39,58 @@ const IndexPage: React.FunctionComponent<Props> = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Section bg="primary" color="white" pt={10} pb={10}>
-          <Box width={[1, 1, 1 / 2]}>
-            <Heading as="h1" color="accent">
-              core37 °°
+        <Section pt={10} pb={10}>
+          <Box width={[1, 1, 2 / 3]}>
+            <Heading as="h1" className="text--lg" mb={0}>
+              Drop the idea of becoming someone, because you are already a
+              masterpiece. You cannot be improved. You have only to come to it,
+              to know it, to realize it.
             </Heading>
           </Box>
         </Section>
-        <Section bg="white" color="black">
+        <Box px={theme.gutter} pb={4}>
+          <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
+            <Cell>
+              <Box bg="black" py={10} />
+            </Cell>
+            <Cell>
+              <Box bg="black" py={10} />
+            </Cell>
+            <Cell>
+              <Box bg="black" py={10} />
+            </Cell>
+          </Grid>
+        </Box>
+        <Section>
           <Box width={[1, 1, 1 / 2]}>
-            <h3>Einstein, is he with you?</h3>
+            <h4>Think less, feel more.</h4>
             <p>
-              Anyway, Grandpa hit him with the car and brought him into the
-              house. He seemed so helpless, like a little lost puppy, my heart
-              just went out for him.
+              Discover yourself, otherwise you have to depend on other people’s
+              opinions who don’t know themselves.
             </p>
             <p>
-              Right, I got it. I know, and all I could say is I'm sorry. What?
-              Cause, George, she wants to go to the dance with you, she just
-              doesn't know it yet. That's why we got to show her that you,
-              George McFly, are a fighter. You're somebody who's gonna stand up
-              for yourself, someone who's gonna protect her.
+              We buy things to please others. We even stay as a sheep and never
+              answer the lion(ess) that lives within us. But when we give our
+              power away, our greatness is lost. Self-awareness is important to
+              know what you want to do. Vague vision brings vague results.
             </p>
           </Box>
         </Section>
-        <Flex flexWrap="wrap">
-          <Box width={[1, 1, 1 / 2]} p={5} bg="highlight">
-            <h4>Einstein, is he with you?</h4>
-            <p>
-              Anyway, Grandpa hit him with the car and brought him into the
-              house. He seemed so helpless, like a little lost puppy, my heart
-              just went out for him.
-            </p>
-            <h1>core37 °°</h1>
-            <h2>core37 °°</h2>
-            <h3>core37 °°</h3>
-            <h4>core37 °°</h4>
+        <Section>
+          <Box width={1}>
+            <h1>Think less, feel more.</h1>
+            <h2>Think less, feel more.</h2>
+            <h3>Think less, feel more.</h3>
+            <h4>Think less, feel more.</h4>
           </Box>
-          <Box width={[1, 1, 1 / 2]} p={5} bg="text" color="body">
-            <h4>Einstein, is he with you?</h4>
-            <p>
-              Anyway, Grandpa hit him with the car and brought him into the
-              house. He seemed so helpless, like a little lost puppy, my heart
-              just went out for him.
-            </p>
-          </Box>
-        </Flex>
-        <Divider bg={['primary', 'secondary', 'accent']} py={'10vh'} />
+        </Section>
+        <Divider bg={['black', 'blue', 'magenta']} py={'10vh'} />
       </AnimatedBox>
     </Layout>
   )
 }
 
 export default IndexPage
+
+//////////////////////////////////////////////////////////////////////
+// End

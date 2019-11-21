@@ -5,13 +5,14 @@
 
 interface ThemeShape {
   breakpoints: string[]
-  mediaQueries: {
+  mq: {
     [key: string]: string
   }
   colors: {
-    [key: string]: string
+    [key: string]: string | string[]
   }
   space: string[]
+  gutter: number[]
   fonts: {
     [key: string]: string
   }
@@ -48,7 +49,7 @@ const theme: ThemeShape = {
   ////////////////////////////////////////////////////////////////////
 
   breakpoints,
-  mediaQueries: {
+  mq: {
     small: `@media screen and (min-width: ${breakpoints[0]})`,
     medium: `@media screen and (min-width: ${breakpoints[1]})`,
     large: `@media screen and (min-width: ${breakpoints[2]})`
@@ -58,15 +59,28 @@ const theme: ThemeShape = {
   ////////////////////////////////////////////////////////////////////
 
   colors: {
-    body: '#ebebeb',
-    text: 'hsl(10, 20%, 20%)',
-    background: 'hsl(10, 10%, 98%)',
-    primary: 'hsl(10, 80%, 50%)',
-    secondary: 'hsl(10, 60%, 50%)',
-    highlight: 'hsl(10, 40%, 90%)',
-    accent: 'hsl(250, 60%, 30%)',
-    muted: 'hsl(10, 20%, 94%)',
-    gray: 'hsl(10, 20%, 50%)'
+    body: '#ffffff',
+    text: '#000000',
+    background: '#ffffff',
+    
+    primary: '#000000',
+    secondary: '#ffffff',
+    tertiary: '#ebebeb',
+
+    highlight: '#f5f6fb',
+    accent: '#2d3a30',
+
+    black: '#000000',
+    white: '#ffffff',
+
+    shades: [
+      '#2e2e31',
+      '#7b7a7d',
+      '#a5a5a6',
+      '#bbbbbc',
+      '#d1d0d2',
+      '#e8e7e8'
+    ]
   },
 
   // Space
@@ -86,6 +100,8 @@ const theme: ThemeShape = {
     '8rem'
   ],
 
+  gutter: [2, 3, 4],
+
   // Typography
   ////////////////////////////////////////////////////////////////////
 
@@ -96,15 +112,14 @@ const theme: ThemeShape = {
   },
 
   fontSizes: [
-    '0.618em',
-    '11.089em',
-    '6.854em',
-    '4.236em',
-    '2.618em',
-    '1.618em',
-    '0.618em',
-    '1.25em',
-    '1em'
+    'var(--text-xs)',
+    'var(--text-base-size)',
+    'var(--text-sm)',
+    'var(--text-md)',
+    'var(--text-lg)',
+    'var(--text-xl)',
+    'var(--text-xxl)',
+    'var(--text-xxxl)',
   ],
 
   Heading: {
@@ -148,6 +163,3 @@ const theme: ThemeShape = {
 }
 
 export default theme
-
-// End component
-//////////////////////////////////////////////////////////////////////

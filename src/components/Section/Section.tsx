@@ -8,22 +8,21 @@
 import * as React from 'react'
 
 // Components
-import { Box, Flex } from '../'
+import { Box, Flex } from '../../elements'
 import styled from 'styled-components'
 
 // Config
 import theme from '../../../config/theme'
 
-// Begin Component
+// Begin
 //////////////////////////////////////////////////////////////////////
 
 // Types
-
 interface Props {
-  bg: string
-  color?: string
-  pt?: any
-  pb?: any
+  bg?: string | undefined
+  color?: string | undefined
+  pt?: number | number[]
+  pb?: number | number[]
 }
 
 const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
@@ -32,7 +31,7 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
       flexWrap="wrap"
       width={1}
       maxWidth={theme.maxWidth}
-      px={[3, 4, 5]}
+      px={theme.gutter}
       m="0 auto"
     >
       {children}
@@ -41,8 +40,8 @@ const Section: React.SFC<Props> = ({ children, bg, color, pt, pb }) => (
 )
 
 Section.defaultProps = {
-  bg: '',
-  color: '',
+  bg: 'background',
+  color: 'text',
   pt: [3, 4, 5],
   pb: [3, 4, 5]
 }
@@ -53,3 +52,6 @@ Section.defaultProps = {
 // `
 
 export default Section
+
+//////////////////////////////////////////////////////////////////////
+// End

@@ -44,11 +44,11 @@ const Header: React.SFC<Props> = ({ title }) => {
       onPin={() => console.log('pinned')}
       onUnpin={() => console.log('unpinned')}
     >
-      <Box as="header" bg="background" py={[1, 2, 2]}>
+      <Box as="header" py={[1, 2, 3]}>
         <Flex
           alignItems="center"
           justifyContent="space-between"
-          px={[2, 3, 4]}
+          px={theme.gutter}
           m="0 auto"
           maxWidth={theme.maxWidth}
         >
@@ -74,6 +74,7 @@ const Header: React.SFC<Props> = ({ title }) => {
 
 const Nav = styled.nav`
   a {
+    color: ${theme.colors.shades[1]};
     text-decoration: none;
     line-height: 1;
     margin-left: 1rem;
@@ -81,10 +82,10 @@ const Nav = styled.nav`
     &:hover,
     &:focus,
     &.nav--active {
-      color: ${theme.colors.primary};
+      color: ${theme.colors.text};
     }
 
-    /* ${theme.mediaQueries.medium} {
+    /* ${theme.mq.medium} {
       font-size: ${theme.fontSizes[5]};
     } */
   }

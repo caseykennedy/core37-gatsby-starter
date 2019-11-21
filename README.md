@@ -15,6 +15,7 @@
 - [x] react-spring animations
 - [x] styled-components + styled-system + rebass for styling
 - [x] styled-css-grid for css grid layouts
+- [x] Polished for cool things
 - [x] Google Analytics support
 - [x] SEO
     - [x] Sitemap

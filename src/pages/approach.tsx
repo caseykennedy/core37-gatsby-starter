@@ -1,9 +1,24 @@
+// Approach page:
+
+// Imports
+//////////////////////////////////////////////////////////////////////
+
+// Core
 import React from 'react'
-import Layout from '../components/Layout'
-import { AnimatedBox } from '../elements'
-import SEO from '../components/SEO'
+
+// Libraries
 import { config, useSpring } from 'react-spring'
-import Article from '../elements/Article'
+
+// Components
+import Section from '../components/Section'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
+
+// Elements
+import { AnimatedBox, Box, Heading } from '../elements'
+
+// Begin
+//////////////////////////////////////////////////////////////////////
 
 const Profile = () => {
   const pageAnimation = useSpring({
@@ -16,20 +31,21 @@ const Profile = () => {
     <Layout>
       <SEO title="core37 Gatsby Starter" />
       <AnimatedBox style={pageAnimation}>
-        <Article py={140}>
-          <h2>My approach</h2>
-          <p>
-            You can visit my <a href="https://www.caseykennedy.me">website</a> or
-            my other{' '}
-            <a href="#">
-              Gatsby projects
-            </a>
-            .
-          </p>
-        </Article>
+        <Section>
+          <Box>
+            <h2>My approach</h2>
+            <p>
+              You can visit my <a href="https://www.caseykennedy.me">website</a>{' '}
+              or my other <a href="#">Gatsby projects</a>.
+            </p>
+          </Box>
+        </Section>
       </AnimatedBox>
     </Layout>
   )
 }
 
 export default Profile
+
+//////////////////////////////////////////////////////////////////////
+// End

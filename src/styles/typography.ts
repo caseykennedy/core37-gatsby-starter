@@ -15,7 +15,7 @@ import AeonikRegularWoff2 from './fonts/AeonikRegular.woff2'
 import AeonikRegularWoff from './fonts/AeonikRegular.woff'
 import AeonikRegularOtf from './fonts/AeonikRegular.otf'
 
-// Begin Typography
+// Begin
 //////////////////////////////////////////////////////////////////////
 
 const Typography = css`
@@ -23,9 +23,9 @@ const Typography = css`
     font-family: 'Aeonik';
     src: url(${AeonikRegularEot});
     src: url(${AeonikRegularWoff2}) format('woff2'),
-        url(${AeonikRegularWoff}) format('woff'),
-        url(${AeonikRegularOtf}) format('opentype'),
-        url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
+      url(${AeonikRegularWoff}) format('woff'),
+      url(${AeonikRegularOtf}) format('opentype'),
+      url(${AeonikRegularEot}?#iefix) format('embedded-opentype');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -45,25 +45,32 @@ const Typography = css`
     margin: 0;
   }
   body {
+    background: ${theme.colors.body};
+    color: ${theme.colors.text};
+
+    border: 0;
+    margin: 0;
+    padding: 0;
+
     font-size: ${theme.root.font.baseSize};
     font-family: ${theme.fonts.body};
     font-weight: ${theme.fontWeights.normal};
     line-height: ${theme.root.font.bodyLineHeight};
     letter-spacing: ${theme.root.font.baseLetterSpacing};
-    background: ${theme.colors.body};
-    border: 0;
-    margin: 0;
-    padding: 0;
-    color: black;
     -webkit-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: geometricPrecision;
-    -webkit-font-feature-settings: "pnum";
-    font-feature-settings: "pnum";
+    -webkit-font-feature-settings: 'pnum';
+    font-feature-settings: 'pnum';
     font-variant-numeric: proportional-nums;
   }
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-weight: ${theme.fontWeights.normal};
     line-height: ${theme.root.font.headingLineHeight};
     margin: 0 0 1.75rem;
@@ -72,27 +79,26 @@ const Typography = css`
   .text--xxxl {
     font-size: ${theme.root.font.xxxl};
   }
-
-  h1, .text--xxl {
+  h1,
+  .text--xxl {
     font-size: ${theme.root.font.xxl};
   }
-
-  h2, .text--xl {
+  h2,
+  .text--xl {
     font-size: ${theme.root.font.xl};
   }
-
-  h3, .text--lg {
+  h3,
+  .text--lg {
     font-size: ${theme.root.font.lg};
   }
-
-  h4, .text--md {
+  h4,
+  .text--md {
     font-size: ${theme.root.font.md};
   }
-
-  .text--sm, small {
+  .text--sm,
+  small {
     font-size: ${theme.root.font.sm};
   }
-
   .text--xs {
     font-size: ${theme.root.font.xs};
   }
@@ -100,7 +106,7 @@ const Typography = css`
     font-size: 1.125em;
     line-height: ${theme.root.font.bodyLineHeight};
     margin-bottom: 1.25em;
-  
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -110,9 +116,12 @@ const Typography = css`
     text-decoration: underline;
     &:hover,
     &:focus {
-      color: ${theme.colors.background};
+      color: ${theme.colors.accent};
     }
   }
 `
 
 export default Typography
+
+//////////////////////////////////////////////////////////////////////
+// End
