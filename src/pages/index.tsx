@@ -41,14 +41,15 @@ const IndexPage: React.FunctionComponent<Props> = () => {
       <AnimatedBox style={pageAnimation}>
         <Section pt={10} pb={10}>
           <Box width={[1, 1, 2 / 3]}>
-            <Heading as="h1" className="text--lg" mb={0}>
+            <Heading as="h1" fontSize={[2, 3, 4]} mb={0}>
               Drop the idea of becoming someone, because you are already a
               masterpiece. You cannot be improved. You have only to come to it,
               to know it, to realize it.
             </Heading>
           </Box>
         </Section>
-        <Box px={theme.gutter} pb={4}>
+        <Divider bg={['black', 'blue', 'magenta']} py={'3vh'} />
+        <Box px={theme.gutter} py={4}>
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell>
               <Box bg="black" py={10} />

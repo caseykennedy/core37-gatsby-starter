@@ -25,13 +25,13 @@ import theme from '../../../config/theme'
 interface Props {}
 
 const Year = () => {
-  return new Date().getFullYear();
+  return new Date().getFullYear()
 }
 
 const Footer: React.SFC<Props> = () => {
   return (
     <Box as="footer" width={1} pt={1} pb={1}>
-      <Flex flexWrap="wrap" width={1} px={[3, 4, 5]} m="0 auto">
+      <Flex flexWrap="wrap" width={1} px={theme.gutter} m="0 auto">
         <Text>&copy; {Year()}</Text>
       </Flex>
     </Box>
