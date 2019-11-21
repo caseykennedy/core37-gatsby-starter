@@ -19,8 +19,8 @@ import theme from '../../../config/theme'
 
 // Types
 interface Props {
-  bg?: string | undefined
-  color?: string | undefined
+  bg?: string
+  color?: string
   pt?: number | number[]
   pb?: number | number[]
 }

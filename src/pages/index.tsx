@@ -1,5 +1,4 @@
-// Index page:
-// This is the home page
+// Home page
 
 // Imports
 //////////////////////////////////////////////////////////////////////
@@ -16,6 +15,7 @@ import Layout from '../components/Layout'
 import Section from '../components/Section'
 import SEO from '../components/SEO'
 import Divider from '../components/Divider'
+import ImgMatch from '../components/ImgMatch'
 
 // Elements
 import { AnimatedBox, Box, Heading } from '../elements'
@@ -39,53 +39,52 @@ const IndexPage: React.FunctionComponent<Props> = () => {
     <Layout>
       <SEO />
       <AnimatedBox style={pageAnimation}>
-        <Section pt={10} pb={10}>
+        <Section pt={7} pb={7}>
           <Box width={[1, 1, 2 / 3]}>
-            <Heading as="h1" fontSize={[2, 3, 4]} mb={0}>
-              Drop the idea of becoming someone, because you are already a
-              masterpiece. You cannot be improved. You have only to come to it,
-              to know it, to realize it.
+            <Heading as="h1" fontSize={[3, 4, 4]} mb={0}>
+              Drop the idea of becomng someone, because you are already a
+              masterpiece. You cannot be improved.
             </Heading>
           </Box>
         </Section>
-        <Divider bg={['black', 'blue', 'magenta']} py={'3vh'} />
-        <Box px={theme.gutter} py={4}>
+        <Box as="section" px={theme.gutter} py={4}>
           <Grid columns="repeat(auto-fit,minmax(120px,1fr))" gap="2rem">
             <Cell>
-              <Box bg="black" py={10} />
+              <Box bg="black">
+                <ImgMatch
+                  src="brutalism-a.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
             </Cell>
             <Cell>
-              <Box bg="black" py={10} />
-            </Cell>
-            <Cell>
-              <Box bg="black" py={10} />
+              <Box bg="black">
+                <ImgMatch
+                  src="brutalism-c.jpg"
+                  altText="PlayWell program state coordinator"
+                />
+              </Box>
             </Cell>
           </Grid>
         </Box>
         <Section>
           <Box width={[1, 1, 1 / 2]}>
-            <h4>Think less, feel more.</h4>
-            <p>
+            <h4>
               Discover yourself, otherwise you have to depend on other people’s
               opinions who don’t know themselves.
-            </p>
-            <p>
-              We buy things to please others. We even stay as a sheep and never
-              answer the lion(ess) that lives within us. But when we give our
-              power away, our greatness is lost. Self-awareness is important to
-              know what you want to do. Vague vision brings vague results.
-            </p>
+            </h4>
+            <p>Vague vision brings vague results.</p>
           </Box>
         </Section>
-        <Section>
-          <Box width={1}>
+        <Section bg={theme.colors.shades[5]}>
+          <Box width={1} mt={-4}>
             <h1>Think less, feel more.</h1>
             <h2>Think less, feel more.</h2>
             <h3>Think less, feel more.</h3>
-            <h4>Think less, feel more.</h4>
+            <Heading as="h4" mb={0}>Think less, feel more.</Heading>
           </Box>
         </Section>
-        <Divider bg={['black', 'blue', 'magenta']} py={'10vh'} />
+        <Divider bg={['magenta', 'blue', 'yellow']} py={'6vh'} />
       </AnimatedBox>
     </Layout>
   )

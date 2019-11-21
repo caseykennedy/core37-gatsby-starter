@@ -19,7 +19,7 @@ import Footer from './Footer'
 // Elements
 import { Box } from '../elements'
 
-// Begin Component
+// Begin
 //////////////////////////////////////////////////////////////////////
 
 // interface RenderData {
@@ -33,29 +33,24 @@ import { Box } from '../elements'
 
 type LayoutProps = {
   children: React.ReactNode
-  color: string
 }
 
-const Layout = ({ children, color }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   const { title }: { title: string } = useSiteMetadata()
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Box>
+        <>
           <Header title={title} />
-          <Box as="main" color={color}>
+          <main>
             {children}
-          </Box>
+          </main>
           <Footer />
-        </Box>
+        </>
       </>
     </ThemeProvider>
   )
-}
-
-Layout.defaultProps = {
-  color: 'black'
 }
 
 export default Layout

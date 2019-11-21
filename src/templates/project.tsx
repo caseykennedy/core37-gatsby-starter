@@ -98,7 +98,7 @@ const Project: React.FunctionComponent<PageProps> = ({ data: { project, images }
   const imagesAnimation = useSpring({ config: config.slow, delay: 800, from: { opacity: 0 }, to: { opacity: 1 } })
 
   return (
-    <Layout color={project.color}>
+    <Layout>
       <SEO
         pathname={project.slug}
         title={`${project.title_detail} | Jodie`}
