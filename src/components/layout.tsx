@@ -41,13 +41,9 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <>
-          <Header title={title} />
-          <main>
-            {children}
-          </main>
-          <Footer />
-        </>
+        <Header title={title} />
+        <main>{children}</main>
+        <Footer />
       </>
     </ThemeProvider>
   )
