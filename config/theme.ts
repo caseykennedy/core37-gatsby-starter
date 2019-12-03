@@ -24,6 +24,9 @@ interface ThemeShape {
     [key: string]: number
   }
   maxWidth: number
+  sidebarWidth: {
+    [key: string]: string
+  }
   transition: {
     [key: string]: string
   }
@@ -60,8 +63,8 @@ const theme: ThemeShape = {
 
   colors: {
     body: '#ffffff',
-    text: '#000000',
-    background: '#ffffff',
+    text: '#ffffff',
+    background: '#151515',
     
     primary: '#000000',
     secondary: '#ffffff',
@@ -134,6 +137,11 @@ const theme: ThemeShape = {
   ////////////////////////////////////////////////////////////////////
 
   maxWidth: 1680,
+
+  sidebarWidth: {
+    big: '320px',
+    normal: '300px',
+  },
 
   transition: {
     string: 'all 0.37s ease'

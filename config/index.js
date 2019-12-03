@@ -1,14 +1,14 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
 
-  siteTitle: 'core37', // Navigation and Site Title
-  siteTitleAlt: 'core37 | Gatsby TypeScript Starter with Styled System', // Alternative Site title for SEO
-  siteTitleShort: 'core37', // short_name for manifest
-  siteHeadline: 'Gatsby TypeScript Starter with Styled System', // Headline for schema.org JSONLD
+  siteTitle: 'The Venue', // Navigation and Site Title
+  siteTitleAlt: 'The Venue at Tahoe | South Lake Tahoes grooviest event venue', // Alternative Site title for SEO
+  siteTitleShort: 'The Venue at Tahoe', // short_name for manifest
+  siteHeadline: 'South Lake Tahoes grooviest event venue', // Headline for schema.org JSONLD
   siteUrl: '', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
   siteLogo: '/logos/logo.png', // Used for SEO and manifest
-  siteDescription: 'Gatsby TypeScript Starter with Styled System',
+  siteDescription: 'South Lake Tahoes grooviest event venue and party space',
   author: 'Casey Kennedy', // Author for schema.org JSONLD
 
   // siteFBAppID: '123456789', // Facebook App ID - Optional
@@ -18,6 +18,6 @@ module.exports = {
   googleAnalyticsID: 'UA-XXXXXX-X',
 
   // Manifest and Progress color
-  themeColor: '#ffffff',
+  themeColor: '#FED2BC',
   backgroundColor: '#000000'
 }

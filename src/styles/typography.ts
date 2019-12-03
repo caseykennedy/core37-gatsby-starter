@@ -45,7 +45,7 @@ const Typography = css`
     margin: 0;
   }
   body {
-    background: ${theme.colors.body};
+    background: ${theme.colors.background};
     color: ${theme.colors.text};
 
     border: 0;

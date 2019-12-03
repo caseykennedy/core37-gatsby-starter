@@ -5,22 +5,26 @@
 
 // Core
 import * as React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import styled, { ThemeProvider } from 'styled-components'
-import { readableColor } from 'polished'
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { ThemeProvider } from 'styled-components'
 import 'typeface-work-sans'
-import theme from '../../config/theme'
-import GlobalStyles from '../styles/global'
+import theme from '../../../config/theme'
+import GlobalStyles from '../../styles/global'
 
 // Componentns
-import Header from './Header'
-import Footer from './Footer'
+import Sidebar from '../Sidebar'
+// import Footer from './Footer'
+
+// Styles
+import { Wrapper, Main, Footer } from './styles.scss';
 
 // Elements
-import { Box } from '../elements'
+import { Box, Flex } from '../../elements'
 
 // Begin
 //////////////////////////////////////////////////////////////////////
+
+
 
 // interface RenderData {
 //   site: {
@@ -41,9 +45,16 @@ const Layout = ({ children }: LayoutProps) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
-        <Header title={title} />
-        <main>{children}</main>
-        <Footer />
+        <Wrapper>
+          <Sidebar color="black" />
+          <Main>{children}</Main>
+          <Footer color="#FED2BC">
+            <Box p={[4]}>
+              {/* Site by <a href="https://www.core37.agency">core37</a> */}
+              All rights reserved
+            </Box>
+          </Footer>
+        </Wrapper>
       </>
     </ThemeProvider>
   )

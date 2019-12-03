@@ -42,8 +42,8 @@ const IndexPage: React.FunctionComponent<Props> = () => {
         <Section pt={7} pb={7}>
           <Box width={[1, 1, 2 / 3]}>
             <Heading as="h1" fontSize={[3, 4, 4]} mb={0}>
-              Drop the idea of becomng someone, because you are already a
-              masterpiece. You cannot be improved.
+              A restaurant five and a half meters below the surface in Norway,
+              exposing you to the wonders beneath the sea.
             </Heading>
           </Box>
         </Section>
@@ -67,23 +67,6 @@ const IndexPage: React.FunctionComponent<Props> = () => {
             </Cell>
           </Grid>
         </Box>
-        <Section>
-          <Box width={[1, 1, 1 / 2]}>
-            <h4>
-              Discover yourself, otherwise you have to depend on other people’s
-              opinions who don’t know themselves.
-            </h4>
-            <p>Vague vision brings vague results.</p>
-          </Box>
-        </Section>
-        <Section bg={theme.colors.shades[5]}>
-          <Box width={1} mt={-4}>
-            <h1>Think less, feel more.</h1>
-            <h2>Think less, feel more.</h2>
-            <h3>Think less, feel more.</h3>
-            <Heading as="h4" mb={0}>Think less, feel more.</Heading>
-          </Box>
-        </Section>
         <Divider bg={['magenta', 'blue', 'yellow']} py={'6vh'} />
       </AnimatedBox>
     </Layout>
